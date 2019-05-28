@@ -27,10 +27,4 @@ class EventsController < ApplicationController
 
   def update
   end
-
-  private
-
-  def event_params
-    params.require(:event).permit(:title, :description, :activity, :address, :name_of_place, :number_of_places, :date, :time, :picture)
-  end
 end
