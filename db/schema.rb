@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_05_28_091251) do
+ActiveRecord::Schema.define(version: 2019_05_28_094951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "number_of_participant"
+    t.string "statut"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "event_id"
+    t.bigint "participant_id"
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["participant_id"], name: "index_bookings_on_participant_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -26,20 +36,10 @@ ActiveRecord::Schema.define(version: 2019_05_28_091251) do
     t.date "date"
     t.time "time"
     t.string "picture"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_events_on_user_id"
-    
-  create_table "bookings", force: :cascade do |t|
-    t.integer "user_id_participant"
-    t.integer "event_id"
-    t.integer "number_of_participant"
-    t.string "statut"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.bigint "organizer_id"
+    t.index ["organizer_id"], name: "index_events_on_organizer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_091251) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "events", "users"
-  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "events"
+  add_foreign_key "bookings", "users", column: "participant_id"
+  add_foreign_key "events", "users", column: "organizer_id"
 end
