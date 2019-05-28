@@ -1,2 +1,26 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1080882/pexels-photo-1080882.jpeg?cs=srgb&dl=athletes-ball-basketball-1080882.jpg&fm=jpg);">
+  <div class="container">
+    <h1>Create a  <strong>new event</strong>, and meet <strong>people</strong>!</h1>
+    <p>Hi there, here you can create a brand new event!</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+   <%= simple_form_for(@event) do |f| %>
+  <%= f.input :title, label: 'Title of your event', error: 'Title is mandatory, please specify one' %>
+  <%= f.input :description, label: 'Description of your event', error: 'Description is mandatory, please specify one', value: @event.description %>
+  <%= f.input :activity, collection: ["Football", "Volley-Ball", "Basket-Ball", "Skatepark", "Park", "Fitness", "Petanque", "Ping-Pong"], as: :radio_buttons, prompt: "Select one from list"  %>
+  <%= f.input :name_of_place, label: 'Name of the place', error: 'Name of the place is mandatory, please specify one' %>
+  <%= f.input :address, label: 'Address of your event', error: 'Address is mandatory, please specify one' %>
+  <%= f.input :number_of_places, label: 'Select the number of places available', collection: 0..15 %>
+   <%= f.input :date, label: 'Date of your event', as: :date %>
+   <%= f.input :time, label: 'Hour of your event', as: :time %>
+
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %></div>
+</div>
+
+
+
+
