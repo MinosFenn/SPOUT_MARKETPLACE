@@ -23,25 +23,10 @@
 <div class="cards">
    <% @events.each do |event| %>
 <div class="card-trip">
-  <img src="https://www.yogajournalfrance.fr/wp-content/uploads/2017/08/Le-Yoga-et-sport-de-haut-niveau.jpg">
+  <%= image_tag event.picture %>
   <div class="card-trip-infos">
     <div>
-      <h2><%= event.title %></h2>
-     <p><%= event.description%></p>
-    </div>
-    <h2 class="card-trip-pricing"><%= event.date%></h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
-  </div>
-</div>
-<% end %>
-</div>
-<div class="cards">
-   <% @events.each do |event| %>
-<div class="card-trip">
-  <img src="https://daily.jstor.org/wp-content/uploads/2018/06/soccer_europe_1050x700.jpg">
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= event.title %></h2>
+      <h2><%= link_to "#{event.title}", event_path(event) %></h2>
      <p><%= event.description%></p>
     </div>
     <h2 class="card-trip-pricing"><%= event.date%></h2>
@@ -51,21 +36,6 @@
 <% end %>
 </div>
 
-<div class="cards">
-   <% @events.each do |event| %>
-<div class="card-trip">
-  <img src="https://secure.meetupstatic.com/photos/event/1/f/5/0/600_458048016.jpeg">
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= event.title %></h2>
-     <p><%= event.description%></p>
-    </div>
-    <h2 class="card-trip-pricing"><%= event.date%></h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
-  </div>
-</div>
-<% end %>
-</div>
 
 <div class="button-container">
  <button class="btn btn-flat my_button">
