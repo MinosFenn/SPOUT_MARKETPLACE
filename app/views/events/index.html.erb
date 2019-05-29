@@ -1,8 +1,7 @@
 <h3>List of events</h3>
 <div class="container">
 <div class="cards">
-
-  <% @events.each do |event| %>
+   <% @events.each do |event| %>
 <div class="card-trip">
   <%= image_tag event.picture %>
   <div class="card-trip-infos">
@@ -13,20 +12,6 @@
     <h2 class="card-trip-pricing"><%= event.date%></h2>
     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
   </div>
-
-  <%= @events.each do |event| %>
-<%= link_to event.title, event_path(event) %>
-<%= event.title %>
-<%= event.description%>
-<%= event.activity%>
-<%= event.address%>
-<%= event.name_of_place%>
-<%= event.number_of_places%>
-<%= event.date%>
-<%= event.time%>
-<%= event.picture%>
-
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
 </div>
 <% end %>
 </div>
@@ -38,4 +23,3 @@
 </button>
 </div>
  </div>
-
