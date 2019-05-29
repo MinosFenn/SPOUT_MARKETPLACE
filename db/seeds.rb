@@ -14,7 +14,7 @@ User.create!(email:"CARORORORO@gmail.com", password:"brabrabrab")
 User.create!(email:"CECILECILCIL@gmail.com", password:"dsddsokdskl")
 User.create!(email:"SAYANDADY@hotmail.com", password:"0hdhdhkdkhd")
 
-Event.create!(organizer: toto, title:"YOGA", description:"niveau expert", activity:"yoga", address:"26eme centenaire", number_of_places: 20)
+Event.create!(organizer: toto, title:"YOGA", description:"A relax activity for you", activity:"yoga", address:"26eme centenaire", number_of_places: 20)
 
-Event.create!(organizer: toto, title:"SOCCER", description:"270 kilometres", activity:"footing", address:"26eme centenaire", number_of_places: 20)
-
+Event.create!(organizer: toto, title:"SOCCER", description:"Soccer games in Marseille!", activity:"footing", address:"26eme centenaire", number_of_places: 20)
+Event.create!(organizer: toto, title:"ZUMBA", description:"Come and dance with us", activity:"footing", address:"26eme centenaire", number_of_places: 20)
