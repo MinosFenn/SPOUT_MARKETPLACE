@@ -1,2 +1,22 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="cards">
+  <% @events.each do |event| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <h2><%= event.title %></h2>
+    </div>
+    <div class="card-trip-infos">
+      <p><%= event.description%></p>
+      <p><%= event.activity%></p>
+      <p><%= event.address%></p>
+      <p><%= event.name_of_place%></p>
+      <p><%= event.number_of_places%></p>
+      <p><%= event.date%></p>
+      <p><%= event.time%></p>
+      <p><%= event.picture%></p>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
