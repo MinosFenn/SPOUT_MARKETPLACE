@@ -5,6 +5,7 @@
 <h1>  List of events </h1>
 <div class="cards">
 <%= @events.each do |event| %>
+<%= link_to event.title, event_path(event) %>
 <%= event.title %>
 <%= event.description%>
 <%= event.activity%>
