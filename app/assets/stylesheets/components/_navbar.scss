@@ -5,6 +5,7 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  z-index: 9999;
 }
 
 .logo-header-center {
@@ -28,6 +29,17 @@
 
 .sticky + .content {
   padding-top: 60px;
+}
+
+#events_link{
+  text-decoration: none;
+  color: #393E46;
+  padding-right: 20px;
+  padding-top: 100px !important;
+}
+
+.navbar-nav {
+  align-items: baseline;
 }
 
 // .header-item {

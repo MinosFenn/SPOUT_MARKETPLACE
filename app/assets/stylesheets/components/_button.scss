@@ -10,12 +10,17 @@
 
 #my_button_create {
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 6px;
   background: red;
   transition: background 0.3s ease;
   margin-top: 5px;
+  text-decoration: none;
   // margin-bottom: 50px;
+}
+
+#my_button_create:hover {
+  background-color: #E50207;
 }
   .my_button a {
     text-decoration: none;
