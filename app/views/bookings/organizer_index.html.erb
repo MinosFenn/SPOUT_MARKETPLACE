@@ -5,9 +5,11 @@
     <li>
       <%= booking.event.title %>
       <%= booking.participant.email %>
-      <%= booking.statut %>
+      <%= display_statut(booking.statut) %>
+      <% if booking.statut == "pending" %>
       <%= link_to "Accept", accept_booking_path(booking), method: :patch %>
       <%= link_to "Decline", decline_booking_path(booking), method: :patch %>
+      <% end %>
     </li>
   <% end %>
 </ul>

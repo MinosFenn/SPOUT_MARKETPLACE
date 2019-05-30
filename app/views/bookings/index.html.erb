@@ -1,11 +1,24 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
-
-<ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      <%= booking.event.title %>
-      <%= booking.statut %>
-    </li>
-  <% end %>
-</ul>
+<h3>List of my bookings </h3>
+<div class="container">
+<div class="cards_booking">
+   <% @bookings.each do |booking| %>
+<div class="card-booking">
+  <%= cl_image_tag booking.event.picture, crop: :fill %>
+  <div class="card-booking-infos">
+    <div>
+      <h2><%= booking.event.title %></h2>
+     <p><%= booking.event.description%></p>
+      <p class="statut"> <%= display_statut(booking.statut)%></p>
+      <h2 class="card-booking-date"><%= booking.event.date%></h2>
+    </div>
+    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-booking-user avatar-bordered"/>
+  </div>
+</div>
+<% end %>
+</div>
+<div class="button-container">
+ <button class="btn btn-flat my_button">
+  <%= link_to "Return to events list", events_path %>
+</button>
+</div>
+ </div>
