@@ -1,23 +1,24 @@
 <h3>List of events</h3>
 <div class="container">
-<div class="cards">
-   <% @events.each do |event| %>
-<div class="card-trip">
-  <%= cl_image_tag(event.picture, crop: :fill) %>
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= link_to "#{event.title}", event_path(event) %></h2>
-     <p><%= event.description%></p>
+  <div class="cards">
+    <% @events.each do |event| %>
+    <div class="card-trip">
+      <%= cl_image_tag(event.picture, crop: :fill) %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= link_to "#{event.title}", event_path(event) %></h2>
+          <p><%= event.description%></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= event.date%></h2>
+        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+      </div>
+      <%= link_to "", event_path(event), class: "card-link" %>
     </div>
-    <h2 class="card-trip-pricing"><%= event.date%></h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+    <% end %>
+  </div>
+  <div class="button-container">
+    <button class="btn btn-flat my_button">
+    <%= link_to "Add a new event", new_event_path %>
+    </button>
   </div>
 </div>
-<% end %>
-</div>
-<div class="button-container">
- <button class="btn btn-flat my_button">
-  <%= link_to "Add a new event", new_event_path %>
-</button>
-</div>
- </div>

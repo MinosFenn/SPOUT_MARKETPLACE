@@ -122,3 +122,21 @@ margin-top: 40px;
   margin-top: 50px;
 
 }
+
+h6{
+  font-size: 12px;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
