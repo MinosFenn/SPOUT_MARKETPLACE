@@ -88,6 +88,14 @@
   position: relative;
 
 }
+
+.card-trip .card-trip-infos-grey {
+  padding: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  background: white;
+}
 .card-trip-infos a {
   text-decoration: none;
   color: black;
