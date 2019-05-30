@@ -3,7 +3,7 @@
 <div class="cards">
    <% @events.each do |event| %>
 <div class="card-trip">
-  <%= image_tag event.picture %>
+  <%= cl_image_tag event.picture, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= link_to "#{event.title}", event_path(event) %></h2>
@@ -15,8 +15,6 @@
 </div>
 <% end %>
 </div>
-
-
 <div class="button-container">
  <button class="btn btn-flat my_button">
   <%= link_to "Add a new event", new_event_path %>

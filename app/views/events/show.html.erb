@@ -1,6 +1,7 @@
-<div class="banner_event" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://downtownsurreybia.com/wp-content/uploads/yoga-outside2.jpg);">
+<div class="banner_event" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @event.picture, crop: :fill %>')">
+
   <div class="container">
-    <h1><strong>Details Event</strong></h1>
+    <h1><strong>Event Details</strong></h1>
     <p>Hi there, here you can validate your event!</p>
     <h1><%= @event.title %></h1>
     <p><%= @event.description %></p>
