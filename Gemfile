@@ -16,6 +16,13 @@ gem 'uglifier'
 gem 'webpacker'
 # new gem added
 gem 'devise'
+# img upload set up
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+# user img upload form
+gem 'carrierwave', '~> 1.2'
+
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
