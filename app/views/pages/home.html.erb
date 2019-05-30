@@ -1,2 +1,62 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner banner_homepage" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1080882/pexels-photo-1080882.jpeg?cs=srgb&dl=athletes-ball-basketball-1080882.jpg&fm=jpg);">
+  <div class="container">
+    <h1>Create events, share your passion and meet people!</h1>
+    <p> Unforgettable activities right next to you </p>
+    <%= link_to "Discover events", events_path,  class: "btn btn-danger", id: "button_homepage"%>
+  </div>
+</div>
+
+
+<div class="containe rmarketing">
+  <div class="row text-center">
+    <div class="col-lg-4 text-center">
+      <%= image_tag 'icon3.png', class: "icone"%>
+      <h2> Discover </h2>
+      <p> Sports activities around you </p>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <%= image_tag 'icon1.png', class: "icone"%>
+      <h2 class="text-center"> Select </h2>
+      <p class="text-center"> Events that you like </p>
+    </div>
+
+    <div class="col-lg-4 text-center">
+      <%= image_tag 'icon2.png', class: "icone"%>
+      <h2 class="text-center">  Meet </h2>
+      <p class="text-center"> People and share unforgettable moments </p>
+    </div>
+  </div>
+</div>
+
+<div class="quote">
+    <h4 class="text-center"> "With Spout, I can discover new places and meet lots of people, I love the concept!"   </h4>
+    <p class="text-center"> Marie Paillon </p>
+</div>
+
+
+<div class="container-picture">
+  <h2 class="text-center"> Discover our <span style="color: red"> Spout </span> team ! </h2>
+  <div class="row">
+    <div class="col-lg-3 text-center">
+      <%= image_tag 'carop.jpg', class: 'rounded-circle' %>
+      <h2 class="text-center"> Caroline </h2>
+    </div>
+
+    <div class="col-lg-3 text-center">
+      <%= image_tag 'simon.jpg', class: 'rounded-circle' %>
+      <h2 class="text-center"> Simon </h2>
+    </div>
+
+    <div class="col-lg-3 text-center">
+      <%= image_tag 'cecile.jpg', class: 'rounded-circle' %>
+
+      <h2 class="text-center"> Cécile </h2>
+    </div>
+
+    <div class="col-lg-3 text-center">
+      <%= image_tag 'aymeric.jpg', class: 'rounded-circle' %>
+      <h2 class="text-center"> Aymeric </h2>
+    </div>
+  </div>
+</div>

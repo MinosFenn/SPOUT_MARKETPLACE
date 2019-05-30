@@ -1,24 +1,18 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="banner_event" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://downtownsurreybia.com/wp-content/uploads/yoga-outside2.jpg);">
+  <div class="container">
+    <h1><strong>Details Event</strong></h1>
+    <p>Hi there, here you can validate your event!</p>
+    <h1><%= @event.title %></h1>
+    <p><%= @event.description %></p>
+    <p><%= @event.address %></p>
+    <p><%= @event.created_at %></p>
+    <%= simple_form_for(@event) do |f| %>
+    <%= f.submit'validate', class: "btn btn-primary"%>
+    <% end %>
+ </div>
 
-<div class="container">
-  <h1><%= @event.title %></h1>
-  <%= link_to "Back to all events", root_path %>
 
 
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h3>Events</h3>
-      <table class="table table-bordered">
-        <tbody>
-          <thead>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Address</th>
-            <th>Name of place</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Picture</th>
-          </thead>
 
 </div>
+
