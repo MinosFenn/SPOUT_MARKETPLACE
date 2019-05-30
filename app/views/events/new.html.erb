@@ -16,6 +16,8 @@
   <%= f.input :number_of_places, label: 'Select the number of places available', collection: 0..15 %>
    <%= f.input :date, label: 'Date of your event', as: :date %>
    <%= f.input :time, label: 'Hour of your event', as: :time %>
+     <%= f.input :picture %>
+  <%= f.input :picture_cache, as: :hidden %>
 
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %></div>
