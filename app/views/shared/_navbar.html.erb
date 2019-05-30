@@ -1,4 +1,4 @@
- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+ <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "Spout.png", class:"logo-header-center" %>
   <% end %>
@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Create an event", new_event_path , class: "btn btn-danger", id: "button_homepage"%>
+        <%= link_to "Create an event", new_event_path , class: "btn btn-danger", id: "my_button_create"%>
       </li>
       <!-- <li class="nav-item">
         <%= link_to "Messages", "#", class: "nav-link" %>
