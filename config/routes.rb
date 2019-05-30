@@ -5,12 +5,12 @@ Rails.application.routes.draw do
       patch :decline
     end
     collection do
-      get :organizer_bookings
+      get :organizer_index
     end
   end
 
   resources :events, only: [:index, :show, :new, :create, :edit, :update] do
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:create, :new]
     collection do
       get :organizer_events
     end

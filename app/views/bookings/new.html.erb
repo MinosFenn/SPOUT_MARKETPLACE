@@ -1,0 +1,6 @@
+<h1> coucou </h1>
+
+<%= simple_form_for [@event, @booking] do |f| %>
+  <%= f.input :number_of_participant, collection: 0..5  %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>

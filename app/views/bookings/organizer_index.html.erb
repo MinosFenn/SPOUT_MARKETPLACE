@@ -1,0 +1,13 @@
+<h1>Reservations on my events</h1>
+
+<ul>
+  <% @organizer_bookings.each do |booking| %>
+    <li>
+      <%= booking.event.title %>
+      <%= booking.participant.email %>
+      <%= booking.statut %>
+      <%= link_to "Accept", accept_booking_path(booking), method: :patch %>
+      <%= link_to "Decline", decline_booking_path(booking), method: :patch %>
+    </li>
+  <% end %>
+</ul>

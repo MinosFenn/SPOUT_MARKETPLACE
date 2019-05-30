@@ -11,7 +11,7 @@ User.destroy_all
 
 toto = User.create!(
   email:"toto@gmail.com",
-  password:"01234567"
+  password:"password"
   )
 User.create!(
   email:"CARORORORO@gmail.com",
