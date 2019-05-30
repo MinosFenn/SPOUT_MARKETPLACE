@@ -7,9 +7,7 @@
     <p><%= @event.description %></p>
     <p><%= @event.address %></p>
     <p><%= @event.created_at %></p>
-    <%= simple_form_for(@event) do |f| %>
-    <%= f.submit'validate', class: "btn btn-primary"%>
-    <% end %>
+    <%= link_to 'Participate', new_event_booking_path(@event), class: 'btn btn-primary' %>
  </div>
 
 

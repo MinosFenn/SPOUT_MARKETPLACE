@@ -5,6 +5,10 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def organizer_events
+    @events = current_user.events
+  end
+
   def show
     @event = Event.find params[:id]
   end
@@ -18,13 +22,11 @@ class EventsController < ApplicationController
     @event.organizer = current_user
 
     if @event.save
-      redirect_to event_path(@event.id)
+      redirect_to event_path(@event.id), notice: 'Event created successfully.'
     else
       render :new
     end
-
   end
-
 
   def edit
     @event = Event.find params[:id]
@@ -34,7 +36,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     @event.update(event_params)
-    redirect_to event_path
+    redirect_to event_path, notice: 'Event has been updated successfully.'
   end
 
   private

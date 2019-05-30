@@ -1,0 +1,11 @@
+<h1> List of my events </h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <%= event.title %>
+      <%= event.description %>
+      <%= event.organizer.email %>
+    </li>
+  <% end %>
+</ul>
