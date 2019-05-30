@@ -1,11 +1,25 @@
-<h1> List of my events </h1>
-
-<ul>
-  <% @events.each do |event| %>
-    <li>
-      <%= event.title %>
-      <%= event.description %>
-      <%= event.organizer.email %>
-    </li>
-  <% end %>
-</ul>
+<h3> My events </h3>
+<div class="container">
+  <div class="cards">
+    <% @events.each do |event| %>
+    <div class="card-trip">
+      <%= cl_image_tag(event.picture, crop: :fill) %>
+      <div class="card-trip-infos-grey">
+        <div>
+          <h2><%= link_to "#{event.title}", event_path(event) %></h2>
+          <h6><%= event.description%></h6>
+          <h6><%= event.organizer.email %></h6>
+        </div>
+        <h2 class="card-trip-pricing"><%= event.date%></h2>
+        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+      </div>
+      <%= link_to "", event_path(event), class: "card-link" %>
+    </div>
+    <% end %>
+  </div>
+  <div class="button-container">
+    <button class="btn btn-flat my_button">
+    <%= link_to "Add a new event", new_event_path %>
+    </button>
+  </div>
+</div>
