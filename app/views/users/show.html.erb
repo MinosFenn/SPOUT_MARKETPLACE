@@ -1,0 +1,12 @@
+  <div class="container d-flex justify-content-around">
+    <div class="background-opacity-white">
+    <%= cl_image_tag(@user.avatar, crop: :fill) %>
+    <h1><%= @user.firstname %></h1>
+    <p><%= @user.lastname %></p>
+    <p><%= @user.address %></p>
+    <p><%= @user.tel %></p>
+    <p><%= @user.birth_date %></p>
+    <%= link_to 'Edit my profile', edit_user_path(@user), class: 'btn btn-danger' %>
+
+ </div>
+</div>
