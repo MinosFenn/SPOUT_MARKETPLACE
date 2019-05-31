@@ -30,7 +30,6 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find params[:id]
-    @activities
   end
 
   def update
