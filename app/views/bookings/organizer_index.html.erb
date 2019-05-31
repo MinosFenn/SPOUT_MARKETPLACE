@@ -1,15 +1,22 @@
-<h1>Reservations on my events</h1>
+<h2 class="text-center">Reservations on my events</h2>
 
-<ul>
-  <% @organizer_bookings.each do |booking| %>
-    <li>
-      <%= booking.event.title %>
-      <%= booking.participant.email %>
-      <%= display_statut(booking.statut) %>
-      <% if booking.statut == "pending" %>
+  <%= @organizer_bookings.each do |booking| %>
+
+<div class="notification">
+  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large"/>
+  <div class="notification-content">
+    <p><small>31th May </small></p>
+     <p><%= booking.event.title %></p>
+     <p><%= booking.participant.email %></p>
+     <p><%= display_statut(booking.statut) %></p>
+  </div>
+
+  <div class="notification-actions">
+     <% if booking.statut == "pending" %>
       <%= link_to "Accept", accept_booking_path(booking), method: :patch %>
       <%= link_to "Decline", decline_booking_path(booking), method: :patch %>
       <% end %>
-    </li>
-  <% end %>
-</ul>
+  </div>
+</div>
+<% end %>
+
