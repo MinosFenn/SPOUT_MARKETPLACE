@@ -1,0 +1,21 @@
+  <div class="container">
+    <h1>Edit your  <strong>profile</strong></h1>
+    <p>Hi there, here you can edit your profile!</p>
+  </div>
+</div>
+
+<div class="row">
+ <div class="col-md-6 offset-md-3">
+<%= simple_form_for(@user) do |f| %>
+  <%= f.input :firstname, label: 'your firstname', error: 'firstname is mandatory, please specify one' %>
+  <%= f.input :lastname, label: 'your lastname', error: 'lastname is mandatory, please specify one' %>
+  <%= f.input :address, label: 'Your personal address' %>
+  <%= f.input :tel, label: 'Your phone number', error: 'your phone number is mandatory, please specify one' %>
+   <%= f.input :birth_date, required: true, as: :date %>
+    <%= f.input :avatar, required: true %>
+    <%= f.input :avatar_cache, as: :hidden %>
+
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+</div>
+</div>
