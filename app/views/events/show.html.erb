@@ -1,4 +1,5 @@
-<div class="banner_event" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path @event.picture, crop: :fill %>')">
+<div class="big_container">
+  <div class="banner_event" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path @event.picture, crop: :fill %>')">
 
   <div class="container d-flex justify-content-around">
     <div class="background-opacity-white">
@@ -10,10 +11,12 @@
     <p> Number of places : <%= @event.number_of_places %></p>
     <p><%= @event.date.strftime("Date: %d/%m/%Y") %></p>
     <p><%= @event.time.strftime("Time: %H:%M") %></p>
-
+    <% if current_user.id == @event.organizer_id %>
     <%= link_to 'Back to my events', organizer_events_events_path, class: 'btn btn-danger' %>
-     <%= link_to 'Participate', new_event_booking_path(@event.id), class: 'btn btn-danger' %>
       <%= link_to 'Edit my event', edit_event_path(@event.id), class: 'btn btn-danger' %>
+      <% else %>
+      <%= link_to 'Participate', new_event_booking_path(@event.id), class: 'btn btn-danger' %>
+      <% end %>
  </div>
 </div>
 
@@ -22,3 +25,4 @@
 
 </div>
 
+</div>
