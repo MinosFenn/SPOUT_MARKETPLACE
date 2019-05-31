@@ -4,7 +4,7 @@
   <% @organizer_bookings.each do |booking| %>
 
 <div class="notification">
-  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large"/>
+ <%= cl_image_tag (event.organizer.avatar), class: "avatar" %>
   <div class="notification-content">
     <p><small>31th May </small></p>
      <p><%= booking.event.title %></p>

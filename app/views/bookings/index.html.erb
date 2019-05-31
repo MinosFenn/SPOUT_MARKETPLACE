@@ -14,7 +14,7 @@
 
       <p class="statut"> <%= display_statut(booking.statut)%></p>
     </div>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-booking-user avatar-bordered"/>
+  <%= cl_image_tag (event.organizer.avatar), class: "avatar" %>
   </div>
 </div>
 <% end %>
