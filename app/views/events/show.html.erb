@@ -4,10 +4,12 @@
   <div class="container d-flex justify-content-around">
     <div class="background-opacity-white">
     <h1><%= @event.title %></h1>
-    <p><%= @event.description %></p>
-    <p><%= @event.activity %></p>
-    <p><%= @event.name_of_place %></p>
-    <p><%= @event.address %></p>
+    <p>Organizer : <%= @event.organizer.firstname %></p>
+    <p>Contact : <%= @event.organizer.email %></p>
+    <p>Description : <%= @event.description %></p>
+    <p>Activity type : <%= @event.activity %></p>
+    <p>Place : <%= @event.name_of_place %></p>
+    <p>Address : <%= @event.address %></p>
     <p> Number of places : <%= @event.number_of_places %></p>
     <p><%= @event.date.strftime("Date: %d/%m/%Y") %></p>
     <p><%= @event.time.strftime("Time: %H:%M") %></p>
