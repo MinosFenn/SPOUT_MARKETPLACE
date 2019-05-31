@@ -1,6 +1,7 @@
-<h2 class="text-center">Reservations on my events</h2>
+<div class="big_container">
+  <h2 class="text-center" style="padding: 45px">Reservations on my events</h2>
 
-  <%= @organizer_bookings.each do |booking| %>
+  <% @organizer_bookings.each do |booking| %>
 
 <div class="notification">
   <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large"/>
@@ -17,6 +18,7 @@
       <%= link_to "Decline", decline_booking_path(booking), method: :patch %>
       <% end %>
   </div>
+
 </div>
 <% end %>
-
+</div>
