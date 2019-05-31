@@ -4,7 +4,7 @@
   <% @organizer_bookings.each do |booking| %>
 
 <div class="notification">
- <%= cl_image_tag (booking.event.organizer.avatar), class: "avatar" %>
+ <%= cl_image_tag (booking.participant.avatar), class: "avatar" %>
   <div class="notification-content">
     <p><small>31th May </small></p>
      <p><%= booking.event.title %></p>
