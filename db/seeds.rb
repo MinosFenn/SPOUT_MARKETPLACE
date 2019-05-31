@@ -9,6 +9,41 @@ Booking.destroy_all
 Event.destroy_all
 User.destroy_all
 
+# Cecile = User.create!(
+#   username: "cecdu13",
+#   firstname: "Cécile",
+#   lastname: "Malbos",
+#   address: "199 rue de rome",
+#   tel: "0656694555",
+#   birth_date: "1994/03/12",
+#   email:"cecile@gmail.com",
+#   avatar: "",
+#   password:"cecilececile"
+#   )
+# Caroline = User.create!(
+#   username: "carot",
+#   firstname: "Caroline",
+#   lastname: "Plin",
+#   address: "199 rue de rome",
+#   tel: "0655694535",
+#   birth_date: "1996/05/01",
+#   email:"caroline@gmail.com",
+#   password:"carolinecaroline"
+#   )
+# Simon = User.create!(
+#   username: "menosfen",
+#   firstname: "Simon",
+#   lastname: "Joachim",
+#   address: "110 boulevard Baille",
+#   tel: "0756634555",
+#   birth_date: "1995/06/01",
+#   email:"simon@gmail.com",
+#   password:"simonsimon"
+#   )
+# Aymeric = User.create!(
+#   username: "Aymerico",
+#   firstname: "Ayirci",
+=======
 # toto = User.create!(
 #   username: "cocozti",
 #   firstname: "Caro",
@@ -62,7 +97,6 @@ User.destroy_all
 #   time: "10:30",
 #   remote_picture_url: "https://www.yogajournalfrance.fr/wp-content/uploads/2017/08/Le-Yoga-et-sport-de-haut-niveau.jpg"
 # )
-
 # Event.create!(
 #   organizer: toto,
 #   title:"SOCCER",
@@ -86,7 +120,7 @@ User.destroy_all
 #   time: "10:30",
 #   remote_picture_url: "https://img-3.journaldesfemmes.fr/6OnE5GaBCMATpiCiJYJRrggsDxM=/910x607/smart/c6dd93a27248469485e4b1029c8f0173/ccmcms-jdf/10841757.jpg"
 #   )
-
+=======
 # Event.create!(
 #   organizer: toto,
 #   title:"BasketBall",

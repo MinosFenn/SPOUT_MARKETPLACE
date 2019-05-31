@@ -8,7 +8,7 @@ class Event < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10 }
   validates :name_of_place, presence: true
   validates :address, presence: true
-  validates :number_of_place, presence: true
+  validates :number_of_places, presence: true
   validates :time, presence: true
   validates :date, presence: true
 end
