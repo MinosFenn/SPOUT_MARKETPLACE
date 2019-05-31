@@ -9,47 +9,49 @@ Booking.destroy_all
 Event.destroy_all
 User.destroy_all
 
-toto = User.create!(
-  username: "cocozti",
-  firstname: "Caro",
-  lastname: "Coco",
-  address: "199 rue de rome",
-  tel: "0556694555",
-  birth_date: "1996/03/12",
-  email:"toto@gmail.com",
-  avatar: "https://unsplash.com/photos/lLxWLqehKZY",
-  password:"password"
-  )
-User.create!(
-  username: "cocozti",
-  firstname: "Caro",
-  lastname: "Coco",
-  address: "199 rue de rome",
-  tel: "0556694555",
-  birth_date: "1996/03/12",
-  email:"CARORORORO@gmail.com",
-  password:"brabrabrab"
-  )
-User.create!(
-  username: "cocozti",
-  firstname: "Caro",
-  lastname: "Coco",
-  address: "199 rue de rome",
-  tel: "0556694555",
-  birth_date: "1996/03/12",
-  email:"CECILECILCIL@gmail.com",
-  password:"dsddsokdskl"
-  )
-User.create!(
-  username: "cocozti",
-  firstname: "Caro",
-  lastname: "Coco",
-  address: "199 rue de rome",
-  tel: "0556694555",
-  birth_date: "1996/03/12",
-  email:"SAYANDADY@hotmail.com",
-  password:"0hdhdhkdkhd"
-  )
+caro = User.find_by(email: "")
+
+# Cecile = User.create!(
+#   username: "cecdu13",
+#   firstname: "Cécile",
+#   lastname: "Malbos",
+#   address: "199 rue de rome",
+#   tel: "0656694555",
+#   birth_date: "1994/03/12",
+#   email:"cecile@gmail.com",
+#   avatar: "",
+#   password:"cecilececile"
+#   )
+# Caroline = User.create!(
+#   username: "carot",
+#   firstname: "Caroline",
+#   lastname: "Plin",
+#   address: "199 rue de rome",
+#   tel: "0655694535",
+#   birth_date: "1996/05/01",
+#   email:"caroline@gmail.com",
+#   password:"carolinecaroline"
+#   )
+# Simon = User.create!(
+#   username: "menosfen",
+#   firstname: "Simon",
+#   lastname: "Joachim",
+#   address: "110 boulevard Baille",
+#   tel: "0756634555",
+#   birth_date: "1995/06/01",
+#   email:"simon@gmail.com",
+#   password:"simonsimon"
+#   )
+# Aymeric = User.create!(
+#   username: "Aymerico",
+#   firstname: "Ayirci",
+#   lastname: "Coco",
+#   address: "199 rue de rome",
+#   tel: "0556694555",
+#   birth_date: "1996/03/12",
+#   email:"SAYANDADY@hotmail.com",
+#   password:"0hdhdhkdkhd"
+#   )
 
 Event.create!(
   organizer: toto,
@@ -64,7 +66,7 @@ Event.create!(
 )
 
 Event.create!(
-  organizer: toto,
+  organizer: cecile,
   title:"SOCCER",
   description:"Soccer games in Marseille!",
   activity:"footing",
@@ -88,7 +90,7 @@ Event.create!(
   )
 
 Event.create!(
-  organizer: toto,
+  organizer: Cecile,
   title:"BasketBall",
   description:"A relax activity for you",
   activity:"yoga",
