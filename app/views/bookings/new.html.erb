@@ -1,8 +1,9 @@
-<div class="big_container">
-  <h1> coucou </h1>
+<div class="big_container validation">
 
+<div class="container-petit">
 <%= simple_form_for [@event, @booking] do |f| %>
-  <%= f.input :number_of_participant, collection: 0..5  %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <h2> <%= f.input :number_of_participant, collection: 0..10  %></h2>
+  <%= f.button :submit, class: "btn btn-danger" %>
 <% end %>
+</div>
 </div>
