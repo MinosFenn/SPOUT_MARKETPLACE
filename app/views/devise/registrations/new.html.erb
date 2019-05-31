@@ -16,18 +16,12 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :username, required: true,
-                input_html: { autocomplete: "username" } %>
-    <%= f.input :firstname, required: true,
-                input_html: { autocomplete: "username" } %>
-    <%= f.input :lastname, required: true,
-                input_html: { autocomplete: "username" } %>
-    <%= f.input :birth_date, required: true,
-                input_html: { autocomplete: "username" }, as: :date %>
-    <%= f.input :address, required: true,
-                input_html: { autocomplete: "username" } %>
-    <%= f.input :tel, required: true,
-                input_html: { autocomplete: "username" } %>
+    <%= f.input :username, required: true %>
+    <%= f.input :firstname, required: true %>
+    <%= f.input :lastname, required: true %>
+    <%= f.input :birth_date, required: true, as: :date %>
+    <%= f.input :address, required: true %>
+    <%= f.input :tel, required: true %>
     <%= f.input :avatar, required: true %>
     <%= f.input :avatar_cache, as: :hidden %>
 
