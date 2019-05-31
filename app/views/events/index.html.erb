@@ -12,7 +12,7 @@
         </div>
         <h2 class="card-trip-pricing"><%= event.date.strftime("%d/%m/%Y")%></h2>
          <h2 class="card-trip-pricing"><%= event.time.strftime("%H:%M")%></h2>
-        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+            <%= cl_image_tag(@user.avatar, crop: :fill) %>
       </div>
       <%= link_to "", event_path(event), class: "card-link" %>
     </div>
