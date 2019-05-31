@@ -8,8 +8,10 @@
     <div>
       <h2><%= booking.event.title %></h2>
      <p><%= booking.event.description%></p>
+      <h2 class="card-booking-date"><%= booking.event.date.strftime("%d/%m/%Y")%></h2>
+      <p class="card-booking-date"><%= booking.event.time.strftime("%H:%M")%></p>
+
       <p class="statut"> <%= display_statut(booking.statut)%></p>
-      <h2 class="card-booking-date"><%= booking.event.date%></h2>
     </div>
     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-booking-user avatar-bordered"/>
   </div>

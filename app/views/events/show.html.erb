@@ -12,6 +12,8 @@
     <p><%= @event.time.strftime("Time: %H:%M") %></p>
 
     <%= link_to 'Back to my events', organizer_events_events_path, class: 'btn btn-danger' %>
+     <%= link_to 'Participate', new_event_booking_path(@event.id), class: 'btn btn-danger' %>
+      <%= link_to 'Edit my event', edit_event_path(@event.id), class: 'btn btn-danger' %>
  </div>
 </div>
 
