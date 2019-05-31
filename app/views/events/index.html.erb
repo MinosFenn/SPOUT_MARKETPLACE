@@ -10,9 +10,9 @@
           <h2><%= link_to "#{event.title}", event_path(event) %></h2>
           <p><%= event.description%></p>
         </div>
-        <h2 class="card-trip-pricing"><%= event.date.strftime("%d/%m/%Y")%></h2>
-         <h2 class="card-trip-pricing"><%= event.time.strftime("%H:%M")%></h2>
-            <%= cl_image_tag(@user.avatar, crop: :fill) %>
+        <h2 class="card-trip-pricing"><%= event.date.strftime("%d/%m/%Y") if !event.date.nil?%></h2>
+         <h2 class="card-trip-pricing"><%= event.time.strftime("%H:%M") if !event.date.nil?%></h2>
+            <%= cl_image_tag (event.organizer.avatar), class: "avatar" %>
       </div>
       <%= link_to "", event_path(event), class: "card-link" %>
     </div>

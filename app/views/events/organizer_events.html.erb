@@ -8,7 +8,7 @@
       <div class="card-trip-infos-grey">
         <div>
 
-        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+       <%= cl_image_tag (event.organizer.avatar), class: "card-trip-user avatar-bordered" %>
           <h2><%= link_to "#{event.title}", event_path(event) %></h2>
           <h6><%= event.description%></h6>
           <h6><%= event.organizer.email %></h6>
